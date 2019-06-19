@@ -1,0 +1,26 @@
+version: "3"
+services:
+  generate:
+    image: tiff16/master-project:second_scala_akka_generate
+    deploy:
+      replicas: 3
+    ports:
+      - "9090:9090"
+  sort:
+    image: tiff16/master-project:second_scala_akka_sort
+    deploy:
+      replicas: 3
+    ports:
+      - "9091:9091"
+  sum:
+    image: tiff16/master-project:second_scala_akka_sum
+    deploy:
+      replicas: 3
+    ports:
+      - "9092:9092"
+  fib:
+    image: tiff16/master-project:second_scala_akka_fib
+    deploy:
+      replicas: 3
+    ports:
+      - "9093:9093"
